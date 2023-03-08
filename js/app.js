@@ -42,10 +42,27 @@ newGameBtn.addEventListener('click', () => {
     enableBtn();
 })
 
-// this function will executed whe a player wins 
+// restart the game 
+restartBtn.addEventListener('click', () => {
+    count = 0;
+    enableBtn();
+})
+
+// this function will executed when a player win 
 const winFunction = (letter) => {
-    disableButtons();
+        if (letter === "X") {
+            message.innerText = "Player 'x' is winner";
+        } else {
+            message.innerText = "Player 'o' is winner";
+        }
+        disableButtons();
+    }
+    // function for draw 
+const drawFunction = () => {
+    message.innerText = "Match draw";
+    disableButtons()
 }
+
 
 // win logic 
 const winChecker = () => {
@@ -83,6 +100,7 @@ btnRef.forEach(element => {
         count += 1;
         if (count === 9) {
             // 
+            drawFunction()
         }
         winChecker();
     })
