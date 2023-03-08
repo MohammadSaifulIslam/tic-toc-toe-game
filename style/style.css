@@ -44,12 +44,11 @@ html {
 #new-game {
     font-size: 1.3em;
     margin-top: 1.5em;
-    padding: 1em;
+    padding: 0.5em 1em;
     border-radius: 8px;
     color: #ffffff;
     background-color: #0a0027;
     border: none;
-    position: relative;
     margin: 1em auto;
     display: block;
 }
@@ -74,4 +73,9 @@ html {
 
 #new-game {
     font-size: 0.6em;
+}
+
+#message {
+    color: #ffffff;
+    font-size: 1em;
 }
